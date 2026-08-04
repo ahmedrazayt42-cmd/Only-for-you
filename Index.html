@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ Sweetheart's Secret ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0d0d0d,#1a0005,#26000a);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow-x:hidden;
+position:relative;
+}
+
+.page{
+width:90%;
+max-width:420px;
+background:rgba(20, 0, 5, 0.65);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 40px rgba(255, 0, 60, 0.2);
+border: 1px solid rgba(255, 77, 109, 0.2);
+text-align:center;
+animation:fade .8s ease;
+z-index: 10;
+margin: 20px 0;
+}
+
+.hidden{
+display:none !important;
+}
+
+h1{
+color:#fff;
+margin-bottom:20px;
+font-size:30px;
+text-shadow: 0 0 10px rgba(255,77,109,0.5);
+}
+
+h2{
+color:#ff758f;
+margin-bottom:15px;
+text-shadow: 0 0 10px rgba(255,77,109,0.4);
+}
+
+p{
+color:#e6e6e6;
+line-height:1.8;
+margin-bottom:20px;
+font-size: 15px;
+}
+
+input{
+width:100%;
+padding:15px;
+border:1px solid rgba(255,77,109,0.4);
+background: rgba(0, 0, 0, 0.4);
+color: white;
+border-radius:15px;
+font-size:18px;
+outline:none;
+margin:20px 0;
+text-align: center;
+transition: 0.3s;
+}
+
+input:focus {
+border-color: #ff4d6d;
+box-shadow: 0 0 15px rgba(255,77,109,0.4);
+}
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:40px;
+font-size:16px;
+font-weight:bold;
+background:linear-gradient(135deg, #ff4d6d, #c9184a);
+color:white;
+cursor:pointer;
+transition:.3s;
+box-shadow: 0 5px 20px rgba(255,77,109,0.4);
+margin: 8px 0;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow: 0 8px 25px rgba(255,77,109,0.6);
+}
+
+.img-container {
+position: relative;
+width: 100%;
+height: 380px;
+border-radius:20px;
+overflow: hidden;
+border:3px solid rgba(255,77,109,0.5);
+box-shadow:0 0 25px rgba(255,0,64,0.3);
+}
+
+img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition: opacity 0.8s ease-in-out;
+}
+
+.fade-img {
+opacity: 0;
+}
+
+#error{
+color:#ffd166;
+margin-top:15px;
+font-weight: bold;
+}
+
+/* Realistic Beating Heart Container */
+.beating-heart-box {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.realistic-heart {
+font-size: 50px;
+color: #ff1744;
+animation: beat 1.2s infinite ease-in-out;
+filter: drop-shadow(0 0 15px rgba(255, 23, 68, 0.8));
+}
+
+@keyframes beat {
+0%, 100% { transform: scale(1); }
+15% { transform: scale(1.25); }
+30% { transform: scale(1); }
+45% { transform: scale(1.15); }
+60% { transform: scale(1); }
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px) scale(0.95);
+}
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+}
+
+/* Floating Hearts */
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:22px;
+animation:float 8s linear infinite;
+opacity:.7;
+z-index: 1;
+pointer-events: none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:0.8;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.poetry-box {
+background: rgba(0, 0, 0, 0.3);
+padding: 20px;
+border-radius: 15px;
+border-left: 4px solid #ff4d6d;
+font-style: italic;
+margin-bottom: 20px;
+text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="passwordPage" class="page">
+<div class="beating-heart-box">
+<div class="realistic-heart">❤️</div>
+</div>
+<h1>🔒 Sweetheart's Secret</h1>
+<p style="font-size:22px;
+font-weight:bold;
+font-style:italic;
+text-align:center;
+line-height:1.9;
+color:#ffd6e7;
+text-shadow:0 0 8px #ff4d88,0 0 18px #ff1f6d;">
+
+<p style="font-size:22px;
+font-weight:bold;
+font-style:italic;
+text-align:center;
+line-height:1.9;
+color:#ffd6e7;
+text-shadow:0 0 8px #ff4d88,0 0 18px #ff1f6d;">
+
+✨ A little surprise,<br>
+made with all my love... ❤️<br>
+Waiting only for you,<br>
+My Jnu. 😘🫀🤗
+
+</p>
+
+</p>
+<input type="password" id="password" placeholder="Enter Password">
+<button onclick="checkPassword()">Unlock ❤️</button>
+<p id="error"></p>
+</div>
+
+<div id="welcomePage" class="page hidden">
+<div class="beating-heart-box">
+<div class="realistic-heart">💖</div>
+</div>
+<h1>❤️ I Love You Jnu ❤️</h1>
+<p style="font-size:24px;color:#ffd6e7;font-style:italic;font-weight:bold;text-align:center;line-height:1.8;text-shadow:0 0 8px #ff4d88,0 0 18px #ff1f6d;">
+❝ Maine kabhi apne aap se bhi utni mohabbat nahi ki,<br>
+jitni tumse karta hoon. ❞ ❤️🫀
+</p>
+<button onclick="showLetter()">Open My Heart 💌</button>
+</div>
+
+<div id="letterPage" class="page hidden">
+<h2 style="font-size:25px;white-space:nowrap;text-align:justify;">✨ Read This With A Smile ✨ 
+</h2>
+<div id="letterText" style="color:#fff;font-size:21px;line-height:1.9;">
+<h3 style="color:#ff9cc8;font-size:28px;text-align:center;margin:10px 0 25px;text-shadow:0 0 15px #ff4d88;">🌹 Meri Jnu... 🌹</h3>
+<h3 style="color:#ff9cc8;
+text-align:center;
+font-size:28px;
+text-shadow:0 0 10px #ff4d88,0 0 20px #ff1f6d;">
+</h3>
+
+<p style="color:#ff9cc8;
+font-size:21px;
+line-height:2;
+text-shadow:0 0 5px #ff4d88;">
+
+<b>Pata hai...?</b><br><br>
+
+Pehle mujhe laga tha tum sirf cute ho...
+phir dheere dheere samajh aaya ke tum thori si ziddi,
+thori si nakhre wali...
+bohot hi zyada pyari...
+aur usse bhi zyada hot ho. 🤭🥰❤️<br><br>
+
+<b>Kabhi kabhi...</b><br><br>
+
+Kabhi kabhi dil karta hai tumhe zor se gale laga loon...
+aur tumhare lips, eyes aur har jagah itni kisses doon. 😘❤️<br><br>
+
+<b>Aur ek baat...</b><br><br>
+
+Agar Allah mujhe dobara zindagi de,
+to har zindagi mein main sirf tumhe hi apna banana chahunga. ❤️♾️<br><br>
+
+<b>Forever &amp; Always... ❤️</b>
+
+</p>
+
+</div>
+<button onclick="showPoetry()">Read Poetry 🌹</button>
+</div>
+
+<div id="poetryPage" class="page hidden">
+<><h2>💍 My Everything 💍</h2>
+<div class="poetry-box">
+<p>
+You areee mineee foreverrr,<br>
+my pasandida aurat, my everything,<br>
+my world,<br>
+my favorite person. 🫶🏻🤍🌙❤️💍<br><br>
+
+I loveee youuuu sooo muchhh foreverrr 😘😚🫀
+</p>
+</p>
+</div>
+<button onclick="showGallery()">Our Memories 📸</button>
+</div>
+
+<div id="galleryPage" class="page hidden">
+<h2>📸 Our Beautiful Memories ❤️</h2>
+<div class="img-container">
+<img id="slide" src="photo1.jpg" alt="Memory">
+</div>
+<br>
+<button onclick="nextPhoto()">Next Photo ❤️</button>
+</div>
+
+<div id="finishPage" class="page hidden">
+<div class="beating-heart-box">
+<div class="realistic-heart">💖</div>
+</div>
+<h2>🫀 Forever With You 🫀</h2>
+
+<p>
+<p style="color:#ff7aa2; font-size:22px; font-weight:500;">
+Me looking at my favourite person and realizing that...
+</p>
+</p>
+
+<p style="font-size:22px;color:#ff4d6d;font-style:italic;">
+"Itni muhabbat toh maine kabhi apne aap se bhi nahi ki,
+jitni tumse kar li hai Jnu .""
+</p>
+
+<p style="margin-top:20px;">
+❤️🫂🎀🌙🌍♾️
+</p>
+
+<button onclick="startAgain()">🔄 Start Again</button>>
+</div>
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<script>
+const correctPassword = "2411"; 
+
+const photos = [
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo6.jpg",
+"photo7.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo10.jpg"
+];
+
+let current = 0;
+let slideInterval = null;
+
+function checkPassword(){
+let pass = document.getElementById("password").value;
+let music = document.getElementById("music");
+
+if(pass === correctPassword){
+document.getElementById("passwordPage").classList.add("hidden");
+document.getElementById("welcomePage").classList.remove("hidden");
+
+// Music handling with error catching if autoplay policy blocks it
+music.play().catch(error => {
+console.log("Audio playback requires user interaction or path adjustment:", error);
+});
+
+} else {
+document.getElementById("error").innerHTML = "❌ Wrong Password, Try Again!";
+}
+}
+
+function showLetter(){
+document.getElementById("welcomePage").classList.add("hidden");
+document.getElementById("letterPage").classList.remove("hidden");
+}
+
+function showPoetry(){
+document.getElementById("letterPage").classList.add("hidden");
+document.getElementById("poetryPage").classList.remove("hidden");
+}
+
+function showGallery(){
+document.getElementById("poetryPage").classList.add("hidden");
+document.getElementById("galleryPage").classList.remove("hidden");
+document.getElementById("slide").src = photos[current];
+startSlide();
+}
+
+function nextPhoto(){
+let imgElement = document.getElementById("slide");
+imgElement.classList.add("fade-img");
+
+setTimeout(() => {
+current++;
+if(current >= photos.length){
+// Clear slideshow interval and head to finish page
+clearInterval(slideInterval);
+document.getElementById("galleryPage").classList.add("hidden");
+document.getElementById("finishPage").classList.remove("hidden");
+current = 0;
+return;
+}
+imgElement.src = photos[current];
+imgElement.classList.remove("fade-img");
+}, 400);
+}
+
+function startSlide(){
+if(slideInterval) clearInterval(slideInterval);
+slideInterval = setInterval(()=>{
+nextPhoto();
+}, 3500);
+}
+
+function startAgain(){
+document.getElementById("finishPage").classList.add("hidden");
+document.getElementById("passwordPage").classList.remove("hidden");
+document.getElementById("password").value = "";
+document.getElementById("error").innerHTML = "";
+current = 0;
+}
+
+// Generate dynamic floating hearts
+for(let i = 0; i < 45; i++){
+let heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = "❤️";
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.animationDuration = (6 + Math.random() * 6) + "s";
+heart.style.animationDelay = (Math.random() * 5) + "s";
+heart.style.fontSize = (14 + Math.random() * 22) + "px";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
